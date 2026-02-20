@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImagineWeb | Crafting Digital Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-6 py-4 backdrop-blur-md border-b border-orange-900/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter" style="color: var(--color-accent-2);">
+                Imagine<span style="color: var(--color-white);">Web</span>
+            </div>
+            <div class="flex space-x-8 font-semibold">
+                <button onclick="showPage('home')" class="nav-link">Home</button>
+                <button onclick="showPage('portfolio')" class="nav-link">Portfolio</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-28 pb-12 px-6">
+        
+        <section id="homePage" class="max-w-7xl mx-auto">
+            <div class="flex flex-col items-center text-center py-24 animate-fade-in">
+                <h1 class="text-6xl md:text-8xl mb-6">We Imagine. We Build.</h1>
+                <p class="text-xl md:text-2xl max-w-2xl opacity-80 mb-10">
+                    Transforming complex ideas into seamless digital realities using modern technology and vibrant design.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="showPage('portfolio')" class="bg-[#CA5310] text-color-white hover:bg-[#FF7C1F] hover:scale-105 px-8 py-3 rounded-full font-bold transition-all">View Our Work</button>
+                    <a href="#contact" class="border border-orange-500/50 hover:border-orange-500 px-8 py-3 rounded-full font-bold transition-all">Get in Touch</a>
+                </div>
+            </div>
+
+            <div id="about" class="max-w-4xl mx-auto py-24 border-t border-orange-900/20 text-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-5xl">About Us</h2>
+                    <div class="space-y-6 text-lg md:text-xl leading-relaxed opacity-90">
+                        <p>
+                            We are <span class="font-bold text-color-white">ImagineWeb</span>, a passionate two-person startup based in Oregon. We believe that businesses of all sizes deserve top-tier digital experiences, which is why our core focus is combining <span class="text-color-white font-semibold">uncompromising style</span> with <span class="text-color-white font-semibold">true affordability</span>.
+                        </p>
+                        
+                            <div class="pt-12 mt-8">
+                                <h3 class="text-3xl text-white mb-8">Meet the Team</h3>
+                                <div class="grid md:grid-cols-2 gap-6 text-left">
+                                    <div class="card p-8 rounded-3xl">
+                                        <div class="w-12 h-12 rounded-full bg-orange-900/30 flex items-center justify-center mb-6">
+                                            <svg class="w-6 h-6 text-[#FF7C1F]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-1">Caden Skiens</h4>
+                                        <p class="text-xs uppercase tracking-[0.15em] opacity-80 mb-4 text-[#CA5310] font-bold">Client Relations & Analytics</p>
+                                        <p class="text-base opacity-70 leading-relaxed">Building strong partnerships and using data-driven insights to ensure your brand's message resonates and converts.</p>
+                                    </div>
+                                
+                                <div class="card p-8 rounded-3xl">
+                                    <div class="w-12 h-12 rounded-full bg-orange-900/30 flex items-center justify-center mb-6">
+                                        <svg class="w-6 h-6 text-[#FF7C1F]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-color-white mb-1">Elijah Stanley</h4>
+                                    <p class="text-xs uppercase tracking-[0.15em] opacity-80 mb-4 text-[#CA5310] font-bold">Developer</p>
+                                    <p class="text-base opacity-70 leading-relaxed">Translating beautiful designs into fast, responsive, and robust code that brings our digital visions to life on the web.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="max-w-4xl mx-auto py-24 border-t border-orange-900/20">
+                <div class="text-center space-y-8">
+                    <h2 class="text-4xl md:text-5xl">Let's Connect</h2>
+                    <p class="text-lg md:text-xl opacity-80 max-w-2xl mx-auto">Ready to start your next project? Reach out to us directly through any of the channels below.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="card p-10 rounded-3xl flex flex-col items-center space-y-4">
+                            <div class="w-12 h-12 rounded-full bg-orange-900/30 flex items-center justify-center mb-2">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <span class="text-xs uppercase tracking-[0.2em] opacity-50 font-bold">Email Us</span>
+                            <a href="mailto:hello@imagineweb.com" class="text-xl md:text-2xl font-semibold contact-item">hello@imagineweb.com</a>
+                        </div>
+
+                        <div class="card p-10 rounded-3xl flex flex-col items-center space-y-4">
+                            <div class="w-12 h-12 rounded-full bg-orange-900/30 flex items-center justify-center mb-2">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <span class="text-xs uppercase tracking-[0.2em] opacity-50 font-bold">Call Us</span>
+                            <a href="tel:+15550000000" class="text-xl md:text-2xl font-semibold contact-item">+1 (555) 000-0000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolioPage" class="max-w-7xl mx-auto hidden-section pt-8 space-y-12">
+            <div class="text-center space-y-4 mb-12">
+                <h2 class="text-5xl md:text-6xl">Sites We've Made</h2>
+                <p class="opacity-70 text-lg">A curated list of our digital architecture.</p>
+            </div>
+
+            <div class="max-w-xl mx-auto mb-12 relative">
+                <input type="text" id="siteSearch" onkeyup="filterSites()" placeholder="Search projects (e.g. 'Auto', 'Dealership')..." class="w-full px-12 py-4 rounded-2xl text-lg shadow-2xl">
+                <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 opacity-40" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+
+            <div id="siteGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+            
+            <div id="noResults" class="hidden text-center py-20 opacity-50 text-xl">
+                No matching projects found.
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-orange-900/30 py-12 mt-4">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-60 text-sm">
+            <p>&copy; 2026 ImagineWebINC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

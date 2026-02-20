@@ -1,0 +1,106 @@
+:root {
+    --color-bg: #250F04;        /* Coffee Bean */
+    --color-accent-1: #CA5310;  /* Bronze Spice */
+    --color-accent-2: #FF7C1F;  /* Pumpkin Spice */
+    --color-text: #FF8833;      /* Vivid Tangerine */
+    --color-white: #FFF4EC;     /* White */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    color: var(--color-accent-2);
+    font-weight: 800;
+}
+
+.text-color-white {
+    color: var(--color-white);
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-accent-2);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.card {
+    background: rgba(202, 83, 16, 0.1);
+    border: 2px solid var(--color-text);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(202, 83, 16, 0.2);
+    border-color: var(--color-accent-2);
+}
+
+.hidden-section {
+    display: none;
+}
+
+/* Search input specific styling */
+#siteSearch {
+    background: rgba(37, 15, 4, 0.8);
+    border: 1px solid var(--color-accent-1);
+    color: var(--color-white);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#siteSearch:focus {
+    border-color: var(--color-accent-2);
+}
+
+#siteSearch::placeholder {
+    color: var(--color-accent-1);
+    opacity: 0.6;
+}
+
+.badge {
+    background: var(--color-accent-1);
+    color: var(--color-white);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.contact-item {
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: var(--color-white);
+}
